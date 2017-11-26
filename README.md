@@ -7,11 +7,6 @@
 ＄ sudo npm install
 ```
 
-build sass , js , hbs, open a server(port: 8000)
-```
-$ gulp
-```
-
 #### description
 It use [gulp](http://gulpjs.com) to compress , minify , open server, build system.
 ( The html's template is [handlebars](http://handlebarsjs.com) )
@@ -39,12 +34,12 @@ $ gulp concate-js
 ## Structure
 
 #### `./sass`
-sass / scss code
+sass / scss code (import `normalize.css` initially)
 + input : sass /
 + output : dist / css /
 
 #### `./js`
-puts js(ES6) code
+puts js (ES6) code
 + input : js /
 + output : dist / js
 
