@@ -1,8 +1,8 @@
 {
-  "name": "gulp-frontend-start",
+  "name": "gulp-frontend-start-template",
   "version": "1.0.0",
   "description": "gulp-frontend-start",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,15 +17,23 @@
   },
   "homepage": "https://github.com/TseHang/gulp-frontend-start#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chalk": "^2.3.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-compass": "^2.1.0",
-    "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.0",
+    "gulp-hbs-router": "^1.0.4",
     "gulp-imagemin": "^3.0.3",
-    "gulp-minify-css": "^1.2.4",
     "gulp-minify-html": "^1.0.6",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.0"
-  }
+    "gulp-uglify": "^2.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {}
 }

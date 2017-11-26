@@ -1,51 +1,91 @@
 # Gulp-Frontend-Start
-**A QUICK START FOR FRONTEND WEB**
+#### A QUICK START FOR FRONTEND
+- Support ES6、Sass(Compass)、Hbs
+- Support livereload
 
 ```
-＄ sudo npm stall
+＄ sudo npm install
 ```
 
-build sass , js , handlebars
+build sass , js , hbs, open a server(port: 8000)
 ```
 $ gulp
 ```
 
-### description
-It use [gulp](http://gulpjs.com) to compress , minify , build sys.
+#### description
+It use [gulp](http://gulpjs.com) to compress , minify , open server, build system.
 ( The html's template is [handlebars](http://handlebarsjs.com) )
 
-+ gulp
-+ gulp-compass
-+ gulp-concat
-+ gulp-imagemin
-+ gulp-minify-css
-+ gulp-minify-html
-+ gulp-plumber
-+ gulp-rename
-+ gulp-uglify
-+ gulp-compile-handlebars
 
-### command
+#### command
 
-build sass , js , handlebars , then watch
+build sass , js , hbs , open a server(`port: 8000`), then watch
 ```
 $ gulp
 ``` 
 
-minify css , js
+minify css , js, html, compress img 
 ```
-$ gulp minify-css
-$ gulp minify-js
+$ gulp minify
 ```
 
 
-concate **js** or **css** file to one file ,  reduce request
+concate **`./src/*.css`** file to `./lib/library.min.css` file ,  reduce request (So do .js)
 ```
 $ gulp concate-css
 $ gulp concate-js
 ```
 
-compress img 
+## Structure
+
+#### `./sass`
+sass / scss code
++ input : sass /
++ output : dist / css /
+
+#### `./js`
+puts js(ES6) code
++ input : js /
++ output : dist / js
+
+#### `./dist` 
+**minify's code (css , js , img , bgm)**
+
+#### `./src`
+some library code ( js , css )
+ex: [jQurty](https://jquery.com)
+
+#### `./lib`
+**minify's library code**
+
+#### `./layout`
+**hbs template** ( include partial )
+
+#### `./hbsRouter.js`
+control the data to transform hbs's template. Look [gulp-hbs-router](https://www.npmjs.com/package/gulp-hbs-router)
+
+```javascript
+const hbsRouter = {
+  index: {
+    author: '',
+    description: '',
+    website: 'www.sample.com.tw',
+    website_name: 'Gulp-Frontend-Start!',
+    keywords: '',
+    first_meet: 'This is index.html!!',
+  },
+};
+module.exports = hbsRouter;
 ```
-$ gulp image
-```
+
+#### `./partial.js`
+**controll partial hbs.** Look [gulp-hbs-router](https://www.npmjs.com/package/gulp-hbs-router)
+
+#### `./gulpfile.js`
+control gulp
+
+#### `./config.rb`
+a config.rb for [compass](http://compass-style.org)
+
+## License
+MIT © [TseHang](https://github.com/TseHang)

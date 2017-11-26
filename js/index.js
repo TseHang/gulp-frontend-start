@@ -1,1 +1,1 @@
-console.log('Im JS File');
+alert('Im JS File');

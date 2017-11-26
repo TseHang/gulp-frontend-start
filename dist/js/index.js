@@ -1,1 +1,3 @@
-console.log("Im JS File");
+'use strict';
+
+alert('Im JS File');
